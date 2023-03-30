@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SingleCart = ({movie}) => {
+const SingleCart = ({movie,handleWatchTime}) => {
     // console.log(props);
     const {movieName,poster,watchTime,imdbRating,description
     } = movie;
@@ -16,7 +16,7 @@ const SingleCart = ({movie}) => {
                         <p>Watch Time :{watchTime}</p>
                         <p>Rating :{imdbRating}</p>
                     </div>
-                    <button className='btn btn-info w-75 m-auto'>Book Now</button>
+                    <button onClick={() => {handleWatchTime(watchTime)}} className='btn btn-info w-75 m-auto'>Book Now</button>
                 </div>
         </div>
     );

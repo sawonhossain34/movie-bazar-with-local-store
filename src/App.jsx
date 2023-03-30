@@ -9,6 +9,10 @@ import SideCart from "./components/SideCart/SideCart";
 function App() {
   const [count, setCount] = useState(0)
 
+  const handleWatchTime = (time) => {
+    console.log(time);
+  }
+
   return (
     <div>
       <div className='header m-auto mb-3'>
@@ -16,7 +20,7 @@ function App() {
       </div>
       <div className="main row">
         <div className="home-container col-md-8">
-          <Home></Home>
+          <Home handleWatchTime={handleWatchTime}></Home>
         </div>
         <div className="sideCart col-md-4 card">
           <SideCart></SideCart>

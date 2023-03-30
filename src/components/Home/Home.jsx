@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SingleCart from '../SingleCart/SingleCart';
 
-const Home = () => {
+const Home = ({handleWatchTime}) => {
 const [movies , setMovies] = useState([]);
 
 
@@ -15,7 +15,7 @@ console.log(movies);
         <div>
             <div className="movie-container row">
                 {
-                    movies.map(movie => <SingleCart movie={movie}></SingleCart>)
+                    movies.map(movie => <SingleCart handleWatchTime={handleWatchTime} movie={movie}></SingleCart>)
                 }
             </div>
         </div>
